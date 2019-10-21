@@ -1,0 +1,26 @@
+[Unit]
+Description=Diytube's distributed currency daemon
+After=network.target
+
+[Service]
+User=diytube
+Group=diytube
+
+Type=forking
+PIDFile=/var/lib/diytubed/diytubed.pid
+
+ExecStart=/usr/bin/diytubed -daemon -pid=/var/lib/diytubed/diytubed.pid \
+          -conf=/etc/diytube/diytube.conf -datadir=/var/lib/diytubed
+
+ExecStop=-/usr/bin/diytube-cli -conf=/etc/diytube/diytube.conf \
+         -datadir=/var/lib/diytubed stop
+
+Restart=always
+PrivateTmp=true
+TimeoutStopSec=60s
+TimeoutStartSec=2s
+StartLimitInterval=120s
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target

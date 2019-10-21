@@ -1,0 +1,11 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Diytube
+Comment=Diytube P2P Cryptocurrency
+Exec=diytube-qt %u
+Terminal=false
+Type=Application
+Icon=diytube128
+MimeType=x-scheme-handler/diytube;
+Categories=Office;Finance;
+Name[en_US]=diytube-qt.desktop

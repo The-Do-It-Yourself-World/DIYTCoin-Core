@@ -1,0 +1,26 @@
+# /etc/conf.d/diytubed: config file for /etc/init.d/diytubed
+
+# Config file location
+#BITCOIND_CONFIGFILE="/etc/diytube/diytube.conf"
+
+# What directory to write pidfile to?  (created and owned by $BITCOIND_USER)
+#BITCOIND_PIDDIR="/var/run/diytubed"
+
+# What filename to give the pidfile
+#BITCOIND_PIDFILE="${BITCOIND_PIDDIR}/diytubed.pid"
+
+# Where to write diytubed data (be mindful that the blockchain is large)
+#BITCOIND_DATADIR="/var/lib/diytubed"
+
+# User and group to own diytubed process
+#BITCOIND_USER="diytube"
+#BITCOIND_GROUP="diytube"
+
+# Path to diytubed executable
+#BITCOIND_BIN="/usr/bin/diytubed"
+
+# Nice value to run diytubed under
+#BITCOIND_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+BITCOIND_OPTS=""
